@@ -9,7 +9,7 @@ void setup()
   pinMode(buzzerPin, OUTPUT);
 
   // kondisi awal mati
-  digitalWrite(ledPin, HIGH);    // LED OFF 
+  digitalWrite(ledPin, LOW);    // LED OFF 
   digitalWrite(buzzerPin, LOW);  // Buzzer OFF
 }
 
@@ -18,13 +18,13 @@ void loop()
   if (digitalRead(sigPin) == HIGH)
   {
     // ADA KEMIRINGAN
-    digitalWrite(ledPin, LOW);     // LED ON
+    digitalWrite(ledPin, HIGH);     // LED ON
     digitalWrite(buzzerPin, HIGH); // BUZZER ON
   }
   else
   {
     // TIDAK MIRING
-    digitalWrite(ledPin, HIGH);    // LED OFF
+    digitalWrite(ledPin, LOW);    // LED OFF
     digitalWrite(buzzerPin, LOW);  // BUZZER OFF
   }
 }
